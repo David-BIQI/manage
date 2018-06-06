@@ -1,0 +1,140 @@
+#数据库连接
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.8:3306/manage
+    username: root
+    password: root
+
+server:
+  port: 8081
+  
+  
+# Eureka服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+
+
+
+#
+#server:
+#  port: 8099 # 监听端口
+#  context-path: /tuokebao
+#spring:
+#  application: 
+#    name: tuokebao-service
+#  datasourceWrite:
+#    driverClassName: com.mysql.jdbc.Driver
+##    url: jdbc:mysql://localhost:3306/tuokebao?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&autoReconnect=true
+##    username: root
+##    password: root
+#    url: jdbc:mysql://192.168.1.8:3306/tuokebao?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&autoReconnect=true
+#    username: root
+#    password: zhuangyq
+#    
+#    filter: stat,wall
+#    initialSize: 5
+#    minIdle: 1
+#    maxActive: 30
+#    minEvictableIdleTimeMillis: 300000
+#    timeBetweenEvictionRunsMillis: 60000
+#    maxWait: 60000
+#    validationQuery: SELECT 1 FROM DUAL
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#  datasourceRead:
+#    driverClassName: com.mysql.jdbc.Driver
+##    url: jdbc:mysql://localhost:3306/tuokebao?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&autoReconnect=true
+##    username: root
+##    password: root
+#
+#    url: jdbc:mysql://192.168.1.8:3306/tuokebao?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&autoReconnect=true
+#    username: root
+#    password: zhuangyq
+#    
+#    
+#    
+#    filter: stat,wall
+#    initialSize: 5
+#    minIdle: 1
+#    maxActive: 30
+#    minEvictableIdleTimeMillis: 300000
+#    timeBetweenEvictionRunsMillis: 60000
+#    maxWait: 60000
+#    validationQuery: SELECT 1 FROM DUAL
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#    
+#  http:
+#    multipart:
+#      max-file-size: 100Mb
+#      max-request-size: 100Mb
+#
+#eureka:
+#  client: 
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url: 
+##     defaultZone: http://superuser:duikavip@192.168.1.8:8761/eureka/
+#      defaultZone: http://127.0.0.1:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+#
+#  
+##声明式事务配置
+##   sys:
+##        transactional:
+##          enabled: true # 默认已开启
+##          customize-transaction-bean-names: *Client # 多个以都和 ',' 分隔
+##          customize-read-only-method-rule-transaction-attributes: *exist # 多个以都和 ',' 分隔
+##          customize-required-method-rule-transaction-attributes: pay*,do*,build* # 多个以都和 ',' 分隔
+#sys:
+#  transactional:
+#    enabled: true
+#    customize-required-method-rule-transaction-attributes: synch*
+# 
+##MyBatisPlus
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/*Dao.xml
+#  typeAliasesPackage: com.duika.tuokebao.app.server.bean
+##主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+#  global-config:
+#    id-type: 0
+##字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+#    field-strategy: 1
+##驼峰下划线转换
+#    db-column-underline: true
+##开发环境启用，部署环境关掉
+##刷新mapper 调试神器
+#    refresh-mapper: true
+##数据库大写下划线转换
+#    capital-mode: true
+##序列接口实现类配置
+##  key-generator: com.joey.*
+##逻辑删除配置
+##logic-delete-value: 0
+##logic-not-delete-value: 1
+##自定义填充策略接口实现
+#    meta-object-handler: com.duika.tuokebao.app.server.util.MyMetaObjectHandler
+##自定义SQL注入器
+##sql-injector: com.joey.*
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+#log:
+#  level: info
+#  path: \log
+#  
+#  
