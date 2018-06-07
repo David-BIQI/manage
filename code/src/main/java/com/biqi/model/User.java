@@ -6,28 +6,45 @@ package com.biqi.model;
  */
 
 import java.util.Date;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
+@Table(name = "User")
+@Api(value="用户表")
 public class User {
 	
+	public static final int SEX_MALE =1;
+	public static final int SEX_FEMALE =0;
 	
+	
+	@Id
 	private Integer id;
 
+    @ApiModelProperty(value = "用户名",required = true)
 	private String name;
 
-	private String passWord;
+    @ApiModelProperty(value = "密码", required = true)
+	private String password;
 
-	private String Phone;
+    @ApiModelProperty(value = "电话")
+	private String phone;
 
+    @ApiModelProperty(value = "1代表男，0代表女")
 	private Integer sex;
 
 	private Date created;
 
-	private Integer createBy;
+	private Integer createby;
 
 	private Date updated;
 
-	private Integer updateBy;
+	private Integer updateby;
 
 }
