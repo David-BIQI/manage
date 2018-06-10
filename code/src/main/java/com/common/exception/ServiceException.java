@@ -2,7 +2,7 @@ package com.common.exception;
 
 import java.io.Serializable;
 
-import com.common.result.ResultCode;
+import com.common.constant.ReCode;
 
 /**   
  * Description: Service运行时候异常
@@ -15,7 +15,7 @@ public class ServiceException extends RuntimeException implements Serializable{
 	private String msg;
 
 	public ServiceException() {
-		this.code = ResultCode.FAIL_SERVER;
+		this.code = ReCode.FAIL_SERVER_ERROR.getCode();
 	}
 
 	public ServiceException(Integer code, String message) {

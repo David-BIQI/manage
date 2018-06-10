@@ -14,10 +14,12 @@ import javax.persistence.Transient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Table(name = "User")
 @Api(value="用户表")
+@ToString
 public class User {
 	
 	public static final int SEX_MALE =1;

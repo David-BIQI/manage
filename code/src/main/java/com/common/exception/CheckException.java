@@ -2,7 +2,7 @@ package com.common.exception;
 
 import java.io.Serializable;
 
-import com.common.result.ResultCode;
+import com.common.constant.ReCode;
 
 /**   
  * Description: TODO
@@ -16,7 +16,7 @@ public class CheckException extends RuntimeException implements Serializable{
 	private String msg;
 
 	public CheckException() {
-		this.code = ResultCode.FAIL_UNCHECK;
+		this.code = ReCode.FAIL_UNCHECK_ERROR.getCode();
 	}
 
 	public CheckException(Integer code, String message) {

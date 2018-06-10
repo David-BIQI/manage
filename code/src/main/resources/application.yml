@@ -5,7 +5,21 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/manage?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
+    
+    
+    #使用springboot2 自带的优秀的数据库连接池 http://blog.didispace.com/Springboot-2-0-HikariCP-default-reason/
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      max-lifetime: 15
+      idle-timeout: 30000
+      auto-commit: true
+      pool-name: DatebookHikariCP
+      connection-timeout: 3000
+      connection-test-query: select 1
 
+    
+#设置端口号
 server:
   port: 8081
   
@@ -32,9 +46,23 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 
-#打印sql的日志
+
+
+#配置日志
 logging:
+  #配置日志文件路径 不同目录下的日志可配置不同级别
   level:
-    com:
-      biqi:
-        dao: debug
+    com.biqi.dao: debug
+    com.biqi.service: debug
+  
+
+
+
+
+
+
+
+
+
+
+

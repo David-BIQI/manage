@@ -10,8 +10,10 @@ import com.biqi.model.User;
 import com.biqi.service.UserService;
 import com.common.result.PageDto;
 import com.common.result.ResultDto;
+import com.mysql.jdbc.log.Log;
 
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 
 /**   
  * Description: 用户管理的基础类
@@ -19,6 +21,7 @@ import io.swagger.annotations.ApiOperation;
  * @author  xiebq @date    2018年6月6日 下午10:56:24 
  */
 @RestController
+@Slf4j
 public class UserController {
 	
 	@Autowired
@@ -69,5 +72,33 @@ public class UserController {
 		return resultDto;
 	}
 	
+	
+	@GetMapping("/user/testList")
+    @ApiOperation(value = "后台处理数据使用到流")
+	public ResultDto<PageDto<User>> testList(){
+		
+		ResultDto<PageDto<User>> resultDto = new ResultDto<>();
+		resultDto.setData(userService.testList());
+		return resultDto;
+	}
+	
+	@GetMapping("/user/testparalle")
+    @ApiOperation(value = "测试并行流")
+	public ResultDto<PageDto<User>> testparalle(){
+		ResultDto<PageDto<User>> resultDto = new ResultDto<>();
+		resultDto.setData(userService.testparalle());
+		return resultDto;
+	}
+	
+	@GetMapping("/user/testLog")
+    @ApiOperation(value = "测试并行流")
+	public ResultDto<Boolean> testLog(){
+		log.info("info ....");
+		log.debug("debug ...");
+		
+		
+		ResultDto<Boolean> resultDto = new ResultDto<>();
+		return resultDto;
+	}
 
 }
