@@ -5,6 +5,11 @@ import lombok.*;
 
 import java.util.List;
 
+/**
+ * @author xiebq
+ *
+ * @param <T>
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

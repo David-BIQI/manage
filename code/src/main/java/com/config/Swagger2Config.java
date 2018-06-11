@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 //参考：http://blog.csdn.net/catoop/article/details/50668896
+/**
+ * @author xiebq
+ *
+ */
 @Configuration
 @EnableSwagger2
 public class Swagger2Config {

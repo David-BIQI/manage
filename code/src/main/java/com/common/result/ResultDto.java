@@ -8,6 +8,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * @author xiebq
+ *
+ * @param <T>
+ */
 @AllArgsConstructor
 @Builder
 @Data

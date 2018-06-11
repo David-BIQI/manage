@@ -5,6 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author xiebq
+ *
+ */
 @SpringBootApplication
 @Slf4j
 public class CodeApplication {

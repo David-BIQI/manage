@@ -64,7 +64,7 @@ public class UserService {
 	public PageDto<User> testList() {
 		List<User> list = userDao.selectAll();
 		log.debug("java8 Stream 流过滤数据 输出");
-		list.stream().filter(user->user.getName().equals("SuperUser")).forEach(user->System.out.println(user.toString()));
+		list.stream().filter(user->("SuperUser").equals(user.getName())).forEach(user->System.out.println(user.toString()));
 		log.info("java8 Stream 流过统计数据{}",list.stream().filter(user->user.getId()<10).count());
 		log.info("java8 Stream 流过滤数据 然后返回流");
 		List<User> list2 = list.stream().filter(user->user.getId()>23).collect(Collectors.toList());

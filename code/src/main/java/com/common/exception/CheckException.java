@@ -35,6 +35,7 @@ public class CheckException extends RuntimeException implements Serializable{
 		return code;
 	}
 
+	@Override
 	public String getMessage() {
 		return msg;
 	}

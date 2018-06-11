@@ -13,6 +13,10 @@ import com.common.mybatis.MyMapper;
 @Mapper
 public interface UserDao extends MyMapper<User> {
 	
+    /**
+     * 测试数据库连接
+     * @return
+     */
     @Select("SELECT count(*) FROM User ")
     Integer countUser();
 
