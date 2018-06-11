@@ -7,6 +7,9 @@
 可能是项目进度
 也可能是自己的日记管理的小系统
 主要技术针对后端，前端可能很丑
+
+Swagger地址
+http://localhost:8081/swagger-ui.html#!
  
 
 
