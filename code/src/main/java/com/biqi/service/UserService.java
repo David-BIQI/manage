@@ -1,20 +1,17 @@
 package com.biqi.service;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+import static com.common.check.CheckUtil.notNull;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.biqi.dao.UserDao;
 import com.biqi.model.User;
 import com.common.result.PageDto;
-import com.google.common.base.Suppliers;
-
 import lombok.extern.slf4j.Slf4j;
 
 /**   
@@ -24,6 +21,8 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class UserService {
+	
+	public static final Integer SuperUserId = 1;
 
 	@Autowired
 	private UserDao userDao;
@@ -35,23 +34,25 @@ public class UserService {
 
 	public Integer saveUser(User user) {
 		user.setId(null);
+		user.setCreateby(SuperUserId);
+		user.setCreated(new Date());
 		userDao.insertUseGeneratedKeys(user);
 		return user.getId();
 	}
 
 	public Boolean deleteUser(Integer id) {
-		User temp = userDao.selectByPrimaryKey(id);
-		if (null != temp) {
-			userDao.deleteByPrimaryKey(id);
-		}
+		User oldUser = userDao.selectByPrimaryKey(id);
+		notNull(oldUser, "用户id:"+id+" 不存在");
+		userDao.deleteByPrimaryKey(id);
 		return true;
 	}
 
 	public Boolean updateUser(User user) {
-		User temp = userDao.selectByPrimaryKey(user.getId());
-		if (null != temp) {
-			userDao.updateByPrimaryKeySelective(user);
-		}
+		User oldUser = userDao.selectByPrimaryKey(user.getId());
+		notNull(oldUser, "用户id:"+user.getId()+" 不存在");
+		user.setUpdateby(SuperUserId);
+		user.setUpdated(new Date());
+		userDao.updateByPrimaryKeySelective(user);
 		return true;
 	}
 
@@ -93,7 +94,6 @@ public class UserService {
 					log.debug("peek2: " + s);
 				}).parallel();
 		parallel.count();
-		
 		List<User> list = userDao.selectAll();
 		PageDto<User> data = new PageDto<>(list, list.size());
 		return data;

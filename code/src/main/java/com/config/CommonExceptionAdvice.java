@@ -3,6 +3,7 @@ package com.config;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,6 +13,7 @@ import com.common.constant.ReCode;
 import com.common.exception.CheckException;
 import com.common.exception.ServiceException;
 import com.common.result.ResultDto;
+import com.fasterxml.jackson.core.JsonParseException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -60,6 +62,13 @@ public class CommonExceptionAdvice {
 			ret.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
 			ret.setMsg(ReCode.FAIL_PARAMETER_ERROR.getName());
 			log.error("接口调用服务异常，请求参数异常:{},uri:{},query params:{}", new Object[]{e.getMessage(),req.getRequestURI(),req.getQueryString()});
+			return httpResp;
+		}
+		//不符合Json格式的错误，或者类型转换异常等
+		if(e instanceof HttpMessageNotReadableException){
+			ret.setCode(ReCode.FAIL_JSON_ERROR.getCode());
+			ret.setMsg(ReCode.FAIL_JSON_ERROR.getName());
+			log.error("接口调用服务异常，请求的Json格式异常:{},uri:{},query params:{}", new Object[]{e.getMessage(),req.getRequestURI(),req.getQueryString()});
 			return httpResp;
 		}
 		

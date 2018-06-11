@@ -1,13 +1,23 @@
 package com.biqi.web;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.biqi.model.User;
+import com.biqi.model.validate.Create;
+import com.biqi.model.validate.Update;
 import com.biqi.service.UserService;
+import com.common.constant.ReCode;
 import com.common.result.PageDto;
 import com.common.result.ResultDto;
 import com.mysql.jdbc.log.Log;
@@ -29,8 +39,21 @@ public class UserController {
 	
 	@PostMapping("/user/save")
     @ApiOperation(value = "保存用户")
-	public ResultDto<Integer> saveUser(@RequestBody User user){
+	public ResultDto<Integer> saveUser(@RequestBody @Validated(value={Create.class})User user,BindingResult bindingResult){
 		ResultDto<Integer> resultDto = new ResultDto<>();
+		//分组校验处理，返回的处理
+        StringBuilder sb = new StringBuilder();  
+        if(bindingResult.hasErrors()) {  
+            List<ObjectError> errors = bindingResult.getAllErrors();  
+            for (ObjectError err : errors) {  
+                sb.append(err.getDefaultMessage()+" ;");  
+            }  
+            resultDto.setMsg(sb.toString());
+            resultDto.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
+            return resultDto;  
+        } 
+		
+		
 		resultDto.setData(userService.saveUser(user));
 		return resultDto;
 	}
@@ -47,8 +70,20 @@ public class UserController {
 	
 	@PostMapping("/user/update")
     @ApiOperation(value = "更新用户")
-	public ResultDto<Boolean> updateUser(@RequestBody User user){
+	public ResultDto<Boolean> updateUser(@RequestBody @Validated(value={Update.class})User user,BindingResult bindingResult){
 		ResultDto<Boolean> resultDto = new ResultDto<>();
+		//分组校验处理，返回的处理
+        StringBuilder sb = new StringBuilder();  
+        if(bindingResult.hasErrors()) {  
+            List<ObjectError> errors = bindingResult.getAllErrors();  
+            for (ObjectError err : errors) {  
+                sb.append(err.getDefaultMessage()+";");  
+            }  
+            resultDto.setMsg(sb.toString());
+            resultDto.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
+            return resultDto;  
+        }  
+		
 		resultDto.setData(userService.updateUser(user));
 		return resultDto;
 	}
