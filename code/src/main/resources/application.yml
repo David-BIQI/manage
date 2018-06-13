@@ -26,13 +26,17 @@ server:
 # mybatis包的扫描，还有就是映射文件设置 mybatis tk插件的使用
 mybatis:
     type-aliases-package: package com.biqi.model
-    mapper-locations: classpath:com.biqi.daoxml/*.xml
+    mapper-locations: classpath:mapper/*.xml
+    #配置驼峰下划线
+    configuration:
+      map-underscore-to-camel-case: true
     
 mapper:
     mappers:
         - com.common.mybatis.MyMapper
     not-empty: false
     identity: MYSQL
+    
 
 pagehelper:
     helperDialect: mysql

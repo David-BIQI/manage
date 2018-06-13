@@ -4,6 +4,6 @@ package com.biqi.model.validate;
  * @Package com.biqi.model.validate 
  * @author  xiebq @date    2018年6月11日 下午4:24:59 
  */
-public interface Create {
+public interface Save {
 
 }

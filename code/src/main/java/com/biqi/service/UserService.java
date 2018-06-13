@@ -1,7 +1,6 @@
 package com.biqi.service;
 
 import static com.common.check.CheckUtil.notNull;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -12,7 +11,11 @@ import org.springframework.stereotype.Service;
 import com.biqi.dao.UserDao;
 import com.biqi.model.User;
 import com.common.result.PageDto;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
 import lombok.extern.slf4j.Slf4j;
+import tk.mybatis.mapper.entity.Example;
 
 /**   
  * @Package com.biqi.service 
@@ -97,6 +100,30 @@ public class UserService {
 		List<User> list = userDao.selectAll();
 		PageDto<User> data = new PageDto<>(list, list.size());
 		return data;
+	}
+
+	
+	public PageDto<User> listPage(Integer page, Integer size) {
+		//tk mybatis进行查询
+        Example example = new Example(User.class);
+        //分页查询
+        PageHelper.startPage(page, size);
+        //添加查询条件
+        //example.createCriteria().andEqualTo("id",XX);
+        example.orderBy("created").desc();
+        List<User> list = userDao.selectByExample(example);
+        //分页查询-->若凡在这里，不能进行分页 PageHelper.startPage(page, size);
+        PageInfo<User> pageInfo = new PageInfo<User>(list);
+		return new PageDto<>(list, pageInfo.getTotal());
+	}
+
+	public Integer countUser() {
+		return userDao.countUser();
+//		return null;
+	}
+
+	public Integer countUser2() {
+		return userDao.countUser2();
 	}
 
 }

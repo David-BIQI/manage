@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.common.constant.ReCode;
 
 /**   
- * Description: TODO
+ * Description: 功能运行，检验条件异常
  * @Package com.common.exception 
  * @author  xiebq @date    2018年6月7日 下午8:17:51 
  */

@@ -18,5 +18,8 @@ public class PageDto<T> {
 
 	private List<T> data;
 
-	private Integer total;
+	/**
+	 * 总数类型有Integer和Long，接口的拓展性，使用Object作为接受对象
+	 */
+	private Object total;
 }

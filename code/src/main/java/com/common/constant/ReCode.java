@@ -28,13 +28,13 @@ public enum ReCode {
 	 */
 	FAIL_UNCHECK_ERROR("运行条件校验异常",4200),
 	/**
-	 * "请求参数校验",4200
+	 * "请求参数类型异常",4300
 	 */
-	FAIL_PARAMETER_ERROR("请求参数校验异常",4300),
+	FAIL_PARAMETER_ERROR("请求参数类型异常",4300),
 	/**
-	 * "请求参数校验",4200
+	 * "请求参数格式异常,可能json格式异常",4301
 	 */
-	FAIL_JSON_ERROR("请求参数格式异常，可能json格式异常",4301);
+	FAIL_JSON_ERROR("请求参数格式异常,可能json格式异常",4301);
 	
 	private String name;
 	
