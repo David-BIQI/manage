@@ -5,31 +5,33 @@ package com.biqi.model;
  * @author  xiebq @date    2018年6月6日 下午10:52:00 
  */
 
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
 import org.hibernate.validator.constraints.Range;
-import org.springframework.validation.annotation.Validated;
-
 import com.biqi.model.validate.Save;
 import com.biqi.model.validate.Update;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@Builder
 @Data
 @Table(name = "User")
 @Api(value="用户表")
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 	
 	public static final int SEX_MALE =1;
@@ -68,5 +70,7 @@ public class User {
 
     @ApiModelProperty(value = "更新人，系统填值")
 	private Integer updateby;
+    
+    
 
 }

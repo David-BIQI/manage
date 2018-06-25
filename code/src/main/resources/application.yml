@@ -17,6 +17,14 @@ spring:
       pool-name: DatebookHikariCP
       connection-timeout: 3000
       connection-test-query: select 1
+      
+#redis设置
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    
+
 
     
 #设置端口号
@@ -57,9 +65,8 @@ logging:
   #配置日志文件路径 不同目录下的日志可配置不同级别
   level:
     com.biqi.dao: debug
-    com.biqi.service: debug
+    com.biqi.service: info
   
-
 
 
 
