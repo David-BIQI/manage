@@ -30,7 +30,7 @@ public enum ReCode {
 	/**
 	 * "请求参数类型异常",4300
 	 */
-	FAIL_PARAMETER_ERROR("请求参数类型异常",4300),
+	FAIL_PARAMETER_ERROR("请求参数异常",4300),
 	/**
 	 * "请求参数格式异常,可能json格式异常",4301
 	 */

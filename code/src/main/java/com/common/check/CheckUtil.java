@@ -3,6 +3,10 @@ package com.common.check;
 import com.common.constant.ReCode;
 import com.common.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+
+import java.util.List;
 
 
 /**
@@ -14,8 +18,22 @@ public class CheckUtil {
 
 
 	public static final int FAIL_SERVER_ERROR = ReCode.FAIL_SERVER_ERROR.getCode();
-	
-	/** 
+
+
+	/**
+	 * 功能:检验传入对象参数-->有异常抛出请求参数异常 4300
+	 * @param bindingResult
+	 */
+    public static void hasErrors(BindingResult bindingResult){
+		StringBuilder sb = new StringBuilder();
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> errors = bindingResult.getAllErrors();
+			errors.forEach(item->sb.append(item.getDefaultMessage()+";"));
+			fail(ReCode.FAIL_PARAMETER_ERROR.getCode(),sb.toString());
+		}
+	};
+
+    /**
 	 * 功能:condition 不成立情况下-->msg
 	 * @author xiebq 2018-05-09 16:49
 	 */

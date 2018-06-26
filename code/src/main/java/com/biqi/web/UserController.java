@@ -1,26 +1,20 @@
 package com.biqi.web;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import com.biqi.model.User;
 import com.biqi.model.validate.Save;
 import com.biqi.model.validate.Update;
 import com.biqi.service.UserService;
-import com.common.constant.ReCode;
 import com.common.result.PageDto;
 import com.common.result.ResultDto;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import static com.common.check.CheckUtil.hasErrors;
 
 /**   
  * Description: 用户管理的基础类
@@ -29,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @RestController
 @Slf4j
-@Api(value="用户管理的基础类Api文档")
+@Api(tags = {"用户管理的基础类Api文档"})
 public class UserController {
 	
 	@Autowired
@@ -40,14 +34,7 @@ public class UserController {
 	public ResultDto<Integer> saveUser(@RequestBody @Validated(value={Save.class})User user,BindingResult bindingResult){
 		ResultDto<Integer> resultDto = new ResultDto<>();
 		//分组数据校验校验处理，返回的处理
-        StringBuilder sb = new StringBuilder();  
-        if(bindingResult.hasErrors()) {  
-            List<ObjectError> errors = bindingResult.getAllErrors();  
-            errors.forEach(item->sb.append(item.getDefaultMessage()+";"));
-            resultDto.setMsg(sb.toString());
-            resultDto.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
-            return resultDto;  
-        } 
+		hasErrors(bindingResult);
 		resultDto.setData(userService.saveUser(user));
 		return resultDto;
 	}
@@ -66,15 +53,8 @@ public class UserController {
     @ApiOperation(value = "更新用户,使用@Validated分组{update}校验数据")
 	public ResultDto<Boolean> updateUser(@RequestBody @Validated(value={Update.class})User user,BindingResult bindingResult){
 		ResultDto<Boolean> resultDto = new ResultDto<>();
-		//分组校验处理，返回的处理
-        StringBuilder sb = new StringBuilder();  
-        if(bindingResult.hasErrors()) {  
-            List<ObjectError> errors = bindingResult.getAllErrors();  
-            errors.forEach(item->sb.append(item.getDefaultMessage()+";")); 
-            resultDto.setMsg(sb.toString());
-            resultDto.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
-            return resultDto;  
-        }  
+		//分组数据校验校验处理，返回的处理
+		hasErrors(bindingResult);
 		resultDto.setData(userService.updateUser(user));
 		return resultDto;
 	}
@@ -146,5 +126,9 @@ public class UserController {
 		ResultDto<Boolean> resultDto = new ResultDto<>();
 		return resultDto;
 	}
+
+
+
+
 
 }
