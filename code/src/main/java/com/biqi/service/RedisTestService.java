@@ -4,14 +4,13 @@ import com.biqi.dao.UserDao;
 import com.biqi.dto.UserDto;
 import com.biqi.model.User;
 import lombok.extern.slf4j.Slf4j;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import static com.common.check.CheckUtil.notNull;
+import static com.common.util.MyJsonUtil.objectToJsonString;
 
 @Service
 @Slf4j
@@ -39,12 +38,12 @@ public class RedisTestService {
     public Boolean saveUserByJson(Integer id) {
         User user = userService.getUserByid(id);
         notNull(user,"用户信息不存在");
-        JSONObject json = JSONObject.fromObject(user);
-        JSONArray array=JSONArray.fromObject(user);
-        String strJson=json.toString();
-        String strArray=array.toString();
-        log.info("strJson:{}",strJson);
-        log.info("strArray:{}",strArray);
+        //String的key map
+        String strJson= objectToJsonString(user);
+        //数组 使用角标去访问
+//        JSONArray array=JSONArray.fromObject(user);
+//        String strArray=array.toString();
+//        log.info("strArray:{}",strArray);
         stringRedisTemplate.opsForValue().set("id:"+user.getId()+user.getName(), strJson);
         return true;
     }
