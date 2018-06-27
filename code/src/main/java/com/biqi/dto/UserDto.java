@@ -25,15 +25,15 @@ public class UserDto implements Serializable{
     @ApiModelProperty(value = "电话")
 	private String phone;
     
-//    @ApiModelProperty(value = "token")
-//	private String token;
+    @ApiModelProperty(value = "token")
+	private String token;
 
-//	public UserDto(String name, String phone, String token) {
-//		super();
-//		this.name = name;
-//		this.phone = phone;
-//		this.token = token;
-//	}
+	public UserDto(String name, String phone, String token) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.token = token;
+	}
 
 	public UserDto() {
 		super();

@@ -2,6 +2,7 @@ package com.biqi.service;
 
 import static com.common.check.CheckUtil.notNull;
 
+import com.common.util.MyToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.biqi.dao.UserDao;
@@ -30,15 +31,19 @@ public class LoginService {
 						.build();
 		user = userDao.selectOne(user);
 		notNull(user, "用户名密码错误");
+		String Token = MyToken.getToken(loginDto);
 		UserDto userDto = UserDto.builder()
 				.name(user.getName())
 				.phone(user.getPhone())
-//				.token("123")
+				.token(Token)
 				.build();
 //		ThreadLocal aaLocal = new ThreadLocal<>()
 		return userDto;
 	}
-	
 
+
+	public Boolean loginOut(LoginDto loginDto) {
+		return null;
+	}
 }
 

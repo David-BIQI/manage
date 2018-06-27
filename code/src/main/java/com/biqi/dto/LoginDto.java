@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**   
  * Description: TODO
@@ -27,6 +28,7 @@ public class LoginDto {
 	private String password;
 	
 	@ApiModelProperty(value = "登陆时间")
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date loginTime;
 	
 	@ApiModelProperty(value = "签名证书")

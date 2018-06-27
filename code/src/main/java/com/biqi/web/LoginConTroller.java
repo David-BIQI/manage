@@ -7,14 +7,19 @@ import com.biqi.service.LoginService;
 import com.common.constant.ReCode;
 import com.common.result.ResultDto;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
+
+import static com.common.check.CheckUtil.hasErrors;
 
 /**   
  * @Package com.biqi.web 
@@ -26,22 +31,26 @@ public class LoginConTroller {
 	
 	@Autowired
 	private LoginService loginService;
-	
+
+	@PostMapping("/loginOut")
+	@ApiOperation(value = "登录", notes="登录")
+	public ResultDto<Boolean> loginOut(HttpSession seesion,@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
+									   BindingResult bindingResult) {
+		hasErrors (bindingResult);
+		ResultDto<Boolean> resultDto = new ResultDto<>();
+		resultDto.setData(loginService.loginOut(loginDto));
+		return resultDto;
+	}
+
+	@PostMapping("/login")
+	@ApiOperation(value = "退出", notes="退出")
 	public ResultDto<UserDto> login(@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
 									BindingResult bindingResult) {
+		hasErrors(bindingResult);
 		ResultDto<UserDto> resultDto = new ResultDto<>();
-		StringBuilder sb = new StringBuilder();
-		if (bindingResult.hasErrors()) {
-			List<ObjectError> errors = bindingResult.getAllErrors();
-			errors.forEach(item -> sb.append(item.getDefaultMessage() + ";"));
-			resultDto.setMsg(sb.toString());
-			resultDto.setCode(ReCode.FAIL_PARAMETER_ERROR.getCode());
-			resultDto.setData(null);
-			return resultDto;
-		}
 		resultDto.setData(loginService.login(loginDto));
 		return resultDto;
 	}
-	
+
 
 }

@@ -14,12 +14,15 @@ public class MyJsonUtil {
         if (null == object){
             return "";
         }
+
         JSONObject json = JSONObject.fromObject(object);
         String strJson=json.toString();
         log.debug("对象：{}",object);
         log.debug("转成String：{}",strJson);
         return strJson;
     }
+
+
 
 
 

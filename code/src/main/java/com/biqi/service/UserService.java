@@ -25,7 +25,7 @@ import tk.mybatis.mapper.entity.Example;
 @Slf4j
 public class UserService {
 	
-	public static final Integer SuperUserId = 1;
+	public static final Integer SUPER_USER_ID = 1;
 
 	@Autowired
 	private UserDao userDao;
@@ -37,7 +37,7 @@ public class UserService {
 
 	public Integer saveUser(User user) {
 		user.setId(null);
-		user.setCreateby(SuperUserId);
+		user.setCreateby(SUPER_USER_ID);
 		user.setCreated(new Date());
 		userDao.insertUseGeneratedKeys(user);
 		return user.getId();
@@ -53,7 +53,7 @@ public class UserService {
 	public Boolean updateUser(User user) {
 		User oldUser = userDao.selectByPrimaryKey(user.getId());
 		notNull(oldUser, "用户id:"+user.getId()+" 不存在");
-		user.setUpdateby(SuperUserId);
+		user.setUpdateby(SUPER_USER_ID);
 		user.setUpdated(new Date());
 		userDao.updateByPrimaryKeySelective(user);
 		return true;

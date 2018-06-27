@@ -19,8 +19,12 @@ public interface UserDao extends MyMapper<User> {
      */
     @Select("SELECT count(*) FROM User ")
     Integer countUser();
-    
-    
+
+
+    /**
+     * 使用xml统计用户数
+     * @return
+     */
     int countUser2();
     
 
