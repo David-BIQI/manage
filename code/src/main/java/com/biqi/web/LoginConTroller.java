@@ -33,8 +33,8 @@ public class LoginConTroller {
 	private LoginService loginService;
 
 	@PostMapping("/loginOut")
-	@ApiOperation(value = "登录", notes="登录")
-	public ResultDto<Boolean> loginOut(HttpSession seesion,@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
+	@ApiOperation(value = "退出", notes="退出")
+	public ResultDto<Boolean> loginOut(HttpSession session,@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
 									   BindingResult bindingResult) {
 		hasErrors (bindingResult);
 		ResultDto<Boolean> resultDto = new ResultDto<>();
@@ -43,12 +43,12 @@ public class LoginConTroller {
 	}
 
 	@PostMapping("/login")
-	@ApiOperation(value = "退出", notes="退出")
-	public ResultDto<UserDto> login(@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
+	@ApiOperation(value = "登录", notes="登录")
+	public ResultDto<UserDto> login(HttpSession session,@RequestBody @Validated(value = { Login.class }) LoginDto loginDto,
 									BindingResult bindingResult) {
 		hasErrors(bindingResult);
 		ResultDto<UserDto> resultDto = new ResultDto<>();
-		resultDto.setData(loginService.login(loginDto));
+		resultDto.setData(loginService.login(session,loginDto));
 		return resultDto;
 	}
 

@@ -1,11 +1,14 @@
 package com.config;
 
+import com.common.exception.UnloginException;
+import com.common.util.UserUtil;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @Configuration
@@ -50,6 +53,13 @@ public class UserFilter {
                 System.out.println("这是登录的方法咯 ");
                 filterChain.doFilter(srequest, sresponse);
             }else{
+                HttpSession session = request.getSession(true);
+                if (session == null) {
+                    throw new UnloginException();
+                }
+                // 从session中获取用户信息放到工具类中
+                String userToken = (String) session.getAttribute(UserUtil.KEY_USER);
+                //TODO 判断用户是否已经登录
                 filterChain.doFilter(srequest, sresponse);
             }
         }
