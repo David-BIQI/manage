@@ -19,9 +19,24 @@ http://localhost:8081/swagger-ui.html#!
 
 3、用户表的增删改查
 
-4、valication的使用
+4、valication的分组校验的使用
 
-5、后面再继续
+5、log日志配置添加
+
+6、redis配置使用
+
+7、异常处理，简洁优化代码
+
+8、在线用户，threadlocal的使用
+   spring配置的使用，面向接口编程--》进行中
+
+9、shiro权限框架的集成
+
+10、登陆界面书写
+
+11、管理主页的配置
+
+12、具体业务实现
 
 
 
