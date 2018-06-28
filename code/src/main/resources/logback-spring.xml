@@ -9,18 +9,18 @@
 		</encoder>
 	</appender>
 	<!-- 按照每天生成日志文件,单个文件最大100，最多保留30天的,全部文件最大1G -->
-<!--  	<appender name="ALL_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">  -->
-<!-- 		<file>log/mylog.txt</file>  -->
-<!--  		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">  -->
-<!-- 			<FileNamePattern>${LOG_HOME}/all-%d{yyyy-MM-dd}.%i.log</FileNamePattern>  -->
-<!-- 			<maxFileSize>10MB</maxFileSize>  -->
-<!-- 			<maxHistory>10</maxHistory>  -->
-<!--  			<totalSizeCap>1GB</totalSizeCap>  -->
-<!--  		</rollingPolicy>  -->
-<!--  		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">  -->
-<!--  			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level- %logger{50}-%msg%n</pattern>  -->
-<!--  		</encoder> -->
-<!--  	</appender>  -->
+ 	<appender name="ALL_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+		<file>log/mylog.txt</file> 
+ 		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy"> 
+			<FileNamePattern>${LOG_HOME}/all-%d{yyyy-MM-dd}.%i.log</FileNamePattern> 
+			<maxFileSize>10MB</maxFileSize> 
+			<maxHistory>10</maxHistory> 
+ 			<totalSizeCap>1GB</totalSizeCap> 
+ 		</rollingPolicy> 
+ 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> 
+ 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level- %X{user} %logger{50}-%msg%n</pattern> 
+ 		</encoder>
+ 	</appender> 
 	
 	<appender name="ERR_FILE"
 		  class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -35,7 +35,7 @@
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level- %X{user} %logger{50} - %msg%n</pattern>
 		</encoder>
 	</appender>
 

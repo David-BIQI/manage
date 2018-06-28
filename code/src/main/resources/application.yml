@@ -26,6 +26,12 @@ spring:
     
 
 
+#自定义属性
+#  @Value("${mqtt.onlinetpye}")
+#  private String onlinetpye;
+mqtt:
+  onlinetpye: java
+
     
 #设置端口号
 server:

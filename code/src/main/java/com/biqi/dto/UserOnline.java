@@ -20,6 +20,9 @@ public class UserOnline implements Serializable {
 
     private static final long serialVersionUID = -1L;
 
+    @ApiModelProperty(value = "用户id")
+	private Integer id;
+    
     @ApiModelProperty(value = "用户名")
     private String name;
 

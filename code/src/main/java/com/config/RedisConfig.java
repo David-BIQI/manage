@@ -8,7 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import com.biqi.dto.UserDto;
-import com.biqi.redis.RedisObjectSerializer;
+import com.common.redis.RedisObjectSerializer;
 
 /**
  * @author 程序猿DD

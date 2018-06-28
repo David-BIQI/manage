@@ -44,6 +44,7 @@ public class LoginService {
 
 		session.setAttribute(UserUtil.KEY_USER, Token);
 		//TODO 需要将用户信息存放到静态类中，或者redis中
+		
 		return userDto;
 	}
 
