@@ -1,0 +1,85 @@
+#数据库连接
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/manage?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    
+    
+    #使用springboot2 自带的优秀的数据库连接池 http://blog.didispace.com/Springboot-2-0-HikariCP-default-reason/
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      max-lifetime: 15
+      idle-timeout: 30000
+      auto-commit: true
+      pool-name: DatebookHikariCP
+      connection-timeout: 3000
+      connection-test-query: select 1
+      
+#redis设置
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    
+
+
+#自定义属性
+#  @Value("${mqtt.onlinetpye}")
+#  private String onlinetpye;
+mqtt:
+  onlinetpye: java
+
+    
+#设置端口号
+server:
+  port: 8081
+  
+# mybatis包的扫描，还有就是映射文件设置 mybatis tk插件的使用
+mybatis:
+    type-aliases-package: package com.biqi.model
+    mapper-locations: classpath:mapper/*.xml
+    #配置驼峰下划线
+    configuration:
+      map-underscore-to-camel-case: true
+    
+mapper:
+    mappers:
+        - com.common.mybatis.MyMapper
+    not-empty: false
+    identity: MYSQL
+    
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+  
+# Eureka服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+
+
+#配置日志
+logging:
+  #配置日志文件路径 不同目录下的日志可配置不同级别
+  level:
+    com.biqi.dao: debug
+    com.biqi.service: info
+  
+
+
+
+
+
+
+
+
+
+
