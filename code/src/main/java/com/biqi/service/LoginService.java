@@ -34,17 +34,15 @@ public class LoginService {
 						.password(loginDto.getPassword())
 						.build();
 		user = userDao.selectOne(user);
-		notNull(user, "用户名密码错误");
+		notNull(user, "用户名或密码错误");
 		String Token = MyToken.getToken(loginDto);
 		UserDto userDto = UserDto.builder()
 				.name(user.getName())
 				.phone(user.getPhone())
 				.token(Token)
 				.build();
-
-//		session.setAttribute(UserUtil.KEY_USER, Token);
+		//需要将用户信息存放到静态类中，或者redis中
 		session.setAttribute(UserUtil.KEY_USER, user.getName());
-		//TODO 需要将用户信息存放到静态类中，或者redis中
 		return userDto;
 	}
 
