@@ -31,7 +31,6 @@ public class UserUtil {
 
 	public static void setUser(String userid) {
 		tlUser.set(userid);
-
 		// 把用户信息放到log4j
 		MDC.put(KEY_USER, userid);
 	}

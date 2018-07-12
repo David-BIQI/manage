@@ -1,9 +1,9 @@
 package com.common.onlineUser;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import com.biqi.dto.UserOnline;
-import com.github.andrewoma.dexx.collection.HashMap;
 
 /**   
  * Description: TODO

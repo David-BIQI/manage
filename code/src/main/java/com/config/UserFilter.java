@@ -58,9 +58,7 @@ public class UserFilter {
 				}
 				// 从session中获取用户信息放到工具类中
 				String userToken = (String) session.getAttribute(UserUtil.KEY_USER);
-				// TODO 判断用户是否已经登录
-				
-				
+				UserUtil.setUser(userToken);
 				filterChain.doFilter(srequest, sresponse);
 			}
 		}

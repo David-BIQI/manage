@@ -42,9 +42,9 @@ public class LoginService {
 				.token(Token)
 				.build();
 
-		session.setAttribute(UserUtil.KEY_USER, Token);
+//		session.setAttribute(UserUtil.KEY_USER, Token);
+		session.setAttribute(UserUtil.KEY_USER, user.getName());
 		//TODO 需要将用户信息存放到静态类中，或者redis中
-		
 		return userDto;
 	}
 
