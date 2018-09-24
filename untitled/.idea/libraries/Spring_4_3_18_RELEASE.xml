@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Spring-4.3.18.RELEASE" type="spring">
+    <properties version="4.3.18.RELEASE" />
+    <CLASSES>
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-aspects-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-context-support-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-core-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-expression-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-instrument-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-context-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-jdbc-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-messaging-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-aop-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-orm-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-jms-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-test-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-tx-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-oxm-4.3.18.RELEASE.jar!/" />
+      <root url="jar://D:/纯洁的微笑/testdandian/lib/spring-beans-4.3.18.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

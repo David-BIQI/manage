@@ -72,7 +72,7 @@ logging:
   level:
     com.biqi.dao: debug
     com.biqi.service: info
-  
+
 
 
 
