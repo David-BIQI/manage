@@ -24,6 +24,11 @@ public class Web {
         return"/login";
     }
 
+    @RequestMapping("/index1")
+    public String index1(){
+        return"/login1";
+    }
+
 
 //    @RequestMapping("/login")
 //    public String login(HttpServletRequest request, Map<String, Object> map) throws Exception{
