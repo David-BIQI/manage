@@ -11,5 +11,32 @@
     <p>密码：<input type="text" name="password" value="123456"/></p>
     <p><input type="submit" value="登录"/></p>
 </form>
+
+<!--<p><input type="button" value="登录1"/></p>-->
+<p><button onclick="add()">Copy Text</button></p>
 </body>
+
+<script type="text/javascript">
+
+    function add() {
+        console.log("测试开始")
+        $.ajax({
+            cache : true,
+            type : "POST",
+            url : "/login",
+            data : {
+                "name": 123,
+                "password": 123123,
+            },
+            async : false,
+            error : function(request) {
+                $.modal.alertError("系统错误");
+            },
+            success : function(data) {
+                $.operate.saveSuccess(data);
+            }
+        });
+    }
+</script>
+
 </html>

@@ -10,6 +10,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ import static com.common.check.CheckUtil.hasErrors;
  * @Package com.biqi.web 
  * @author  xiebq @date    2018年6月6日 下午10:56:24 
  */
-@RestController
+@Controller
 @Slf4j
 @Api(tags = {"用户管理的基础类Api文档"})
 public class UserController {
