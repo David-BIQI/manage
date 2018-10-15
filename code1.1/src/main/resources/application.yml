@@ -1,5 +1,9 @@
 #数据库连接
 spring:
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    cache: false
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/manage?useUnicode=true&characterEncoding=utf8&useSSL=false
@@ -17,7 +21,6 @@ spring:
       pool-name: DatebookHikariCP
       connection-timeout: 3000
       connection-test-query: select 1
-      
 #redis设置
   redis:
     host: localhost
@@ -35,7 +38,7 @@ mqtt:
     
 #设置端口号
 server:
-  port: 8081
+  port: 8088
   
 # mybatis包的扫描，还有就是映射文件设置 mybatis tk插件的使用
 mybatis:

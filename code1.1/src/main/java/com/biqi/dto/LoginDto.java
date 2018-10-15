@@ -10,8 +10,7 @@ import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 /**   
- * Description: TODO
- * @Package com.biqi.dto 
+ * @Package com.biqi.dto
  * @author  xiebq @date    2018年6月16日 下午5:13:03 
  */
 @Data
@@ -20,18 +19,18 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class LoginDto {
 	
 	@ApiModelProperty(value = "用户名")
-    @Size(min = 2, max = 8,message="名字长度不必须是2-8个字符",groups = {Login.class})
+    @Size(min = 1, max = 8,message="名字长度不必须是2-8个字符",groups = {Login.class})
 	private String name;
 	
 	@ApiModelProperty(value = "密码")
-    @Size(min = 6, max = 8,message="登陆密码输入长度错误",groups={Login.class})
+    @Size(min = 1, max = 8,message="登陆密码输入长度错误",groups={Login.class})
 	private String password;
 	
-	@ApiModelProperty(value = "登陆时间")
-	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date loginTime;
-	
-	@ApiModelProperty(value = "签名证书")
-	private String sign;
+//	@ApiModelProperty(value = "登陆时间")
+//	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//	private Date loginTime;
+//
+//	@ApiModelProperty(value = "签名证书")
+//	private String sign;
 
 }

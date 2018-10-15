@@ -1,6 +1,6 @@
 package com.shiro.realm;
 
-import com.biqi.constant.StatusEnum;
+import com.biqi.constant.BaseConstant;
 import com.biqi.dao.*;
 import com.biqi.model.*;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +23,8 @@ import java.util.List;
   *  说明：重写realm的方法
   *  xiebq 2018/7/26
   */
-@Slf4j
-@Component
+//@Slf4j
+//@Component
 public class UserRealm extends AuthorizingRealm {
 
     //注入角色权限等表
@@ -64,7 +64,7 @@ public class UserRealm extends AuthorizingRealm {
         roles.forEach(item->{
             authorizationInfo.addRole(item.getRoleName());
             RoleToPermission roleToPermission = new RoleToPermission();
-            roleToPermission.setStatus(StatusEnum.NORMAL_STATUS.getKey());
+            roleToPermission.setStatus(BaseConstant.STATUS.YES);
             roleToPermission.setRoleId(item.getId());
             List<RoleToPermission> select = roleToPermissionDao.select(roleToPermission);
             for (RoleToPermission itemRoleToPermission : select) {
