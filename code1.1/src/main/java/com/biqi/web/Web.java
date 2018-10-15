@@ -28,6 +28,10 @@ public class Web {
     public String index1(){
         return"/login1";
     }
+    @RequestMapping("/index2")
+    public String index2(){
+        return"/login2";
+    }
 
 
 //    @RequestMapping("/login")
