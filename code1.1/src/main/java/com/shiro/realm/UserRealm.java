@@ -23,7 +23,7 @@ import java.util.List;
   *  说明：重写realm的方法
   *  xiebq 2018/7/26
   */
-//@Slf4j
+@Slf4j
 //@Component
 public class UserRealm extends AuthorizingRealm {
 

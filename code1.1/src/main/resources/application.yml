@@ -4,13 +4,15 @@ spring:
     mode: HTML
     encoding: utf-8
     cache: false
+    prefix: classpath:/templates
+
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/manage?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
     
-    
+
     #使用springboot2 自带的优秀的数据库连接池 http://blog.didispace.com/Springboot-2-0-HikariCP-default-reason/
     type: com.zaxxer.hikari.HikariDataSource
     hikari:

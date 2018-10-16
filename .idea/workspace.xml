@@ -3,7 +3,126 @@
   <component name="ChangeListManager">
     <list default="true" id="6216149d-1ad6-4018-a740-c5175e0e9280" name="Default" comment="测试idea的git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java" afterPath="$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/java/com/biqi/web/LoginConTroller.java" afterPath="$PROJECT_DIR$/code1.1/src/main/java/com/biqi/web/LoginConTroller.java" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/java/com/biqi/web/Web.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/java/com/shiro/realm/UserRealm.java" afterPath="$PROJECT_DIR$/code1.1/src/main/java/com/shiro/realm/UserRealm.java" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/echarts/echarts.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/layui.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/layui.mobile.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/code.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/laydate/default/laydate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/icon-ext.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/layer.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/loading-0.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/loading-1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/css/modules/layer/default/loading-2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/font/iconfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/font/iconfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/font/iconfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/font/iconfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/0.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/10.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/11.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/12.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/13.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/14.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/15.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/16.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/17.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/18.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/19.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/20.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/21.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/22.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/23.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/24.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/25.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/26.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/27.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/28.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/29.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/3.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/30.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/31.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/32.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/33.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/34.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/35.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/36.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/37.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/38.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/39.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/4.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/40.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/41.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/42.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/43.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/44.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/45.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/46.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/47.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/48.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/49.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/5.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/50.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/51.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/52.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/53.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/54.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/55.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/56.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/57.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/58.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/59.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/6.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/60.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/61.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/62.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/63.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/64.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/65.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/66.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/67.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/68.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/69.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/7.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/70.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/71.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/8.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/images/face/9.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/carousel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/code.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/element.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/flow.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/laydate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/layedit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/layer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/laypage.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/laytpl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/mobile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/table.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/tree.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/upload.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/lay/modules/util.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/layui.all.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/layui/layui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/image/bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/image/code.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/image/v.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/image/wx.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/image/zfb.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/js/vip_comm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/js/vip_nav.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/js/vip_tab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/frame/static/js/vip_table.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/login1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/code1.1/src/main/resources/templates/login2.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +148,7 @@
       <file leaf-file-name="MyJsonUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="418">
               <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -41,8 +160,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,8 +204,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="x" value="71" />
+    <option name="y" value="33" />
+    <option name="width" value="1142" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -104,8 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,23 +231,14 @@
               <item name="manage" type="b2602c69:ProjectViewProjectNode" />
               <item name="manage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="manage" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="manage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="manage" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,29 +361,30 @@
       <workItem from="1529743959848" duration="15000" />
       <workItem from="1530082840403" duration="106000" />
       <workItem from="1530083173772" duration="125000" />
+      <workItem from="1539652011627" duration="634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246000" />
+    <option name="totallyTimeSpent" value="880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -286,12 +396,39 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -311,17 +448,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="418">
           <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -333,6 +460,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/main/java/com/common/util/MyJsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

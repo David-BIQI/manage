@@ -22,7 +22,7 @@ import static com.common.check.CheckUtil.hasErrors;
  * @Package com.biqi.web 
  * @author  xiebq @date    2018年6月6日 下午10:56:24 
  */
-@Controller
+@RestController
 @Slf4j
 @Api(tags = {"用户管理的基础类Api文档"})
 public class UserController {
