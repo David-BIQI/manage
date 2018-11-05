@@ -15,7 +15,7 @@
 
 <div class="login-main">
     <header class="layui-elip">后台登录</header>
-    <form class="layui-form"  method="post" action="/login">
+    <form class="layui-form" >
     <!--<form class="layui-form" name="form" action="/login" method="post">-->
 
         <div class="layui-input-inline">
@@ -44,13 +44,6 @@
 
 
 
-    欢迎注册，请输入用户名和密码
-    <form method="post" action="/login">
-        <p>姓名：<input type="text" name="username" size="10"></p>
-        <p>密码：<input type="password" name="password" size="10"></p>
-        <p><input type="submit" value="确定">
-            <input type="reset" value="取消"></p>
-    </form>
 
 </div>
 
@@ -88,6 +81,37 @@
     //         return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
     //     });
     // });
+
+
+
+    layui.use(['form'], function () {
+        var form = layui.form,
+        $ = layui.jquery;
+        form.on('submit(demo1)', function(data){
+            var username =  $('input[name="username"]').val();
+            var password = $('input[name="password"]').val();;
+            $.ajax({
+                type: "post",
+                url: "/login",
+                data: {
+                    "username": username,
+                    "password": password
+                },
+                success: function(data) {
+                    console.log(data)
+                    if (data.code == 0) {
+                        alert("厉害炸了");
+                        // location.href = 'main';
+                        location.href = ' http://localhost:8088/main';
+                        // location.href = '厉害炸了';
+                    } else {
+                        alert("下一次就会成功的");
+                    }
+                }
+            });
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+    });
 
 
     // console.log(data.elem) //被执行事件的元素DOM对象，一般为button对象

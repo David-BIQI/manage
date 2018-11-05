@@ -4,14 +4,12 @@ import com.biqi.constant.BaseConstant;
 import com.biqi.dao.*;
 import com.biqi.model.*;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +22,6 @@ import java.util.List;
   *  xiebq 2018/7/26
   */
 @Slf4j
-//@Component
 public class UserRealm extends AuthorizingRealm {
 
     //注入角色权限等表
@@ -85,29 +82,58 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 
-        //得到用户名
+        System.out.println("MyShiroRealm.doGetAuthenticationInfo()");
+        //获取用户的输入的账号.
         String username = (String)token.getPrincipal();
-        //得到密码这里返回的是不是String 是char的数组
-//        String password = (String)token.getCredentials();
-        System.out.println("username:"+username);
-        //得到用户名或者密码
+        System.out.println(token.getCredentials());
+        //通过username从数据库中查找 User对象，如果找到，没找到.
+        //实际项目中，这里可以根据实际情况做缓存，如果不做，Shiro自己也是有时间间隔机制，2分钟内不会重复执行该方法
         User user = new User();
         user.setName(username);
-        User selectOne = userDao.selectOne(user);
-        if (null == selectOne){
+        User userInfo = userDao.selectOne(user);
+        System.out.println("----->>userInfo="+userInfo);
+        if(userInfo == null){
             return null;
         }
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
-                //用户名
-                username,
-                //密码
-                selectOne.getPassword(),
-                //salt=username+salt//md5加盐算法
-                //ByteSource.Util.bytes(userInfo.getCredentialsSalt()),
-                //realm name
-                getName()
+                userInfo, //用户名
+                userInfo.getPassword(), //密码
+                ByteSource.Util.bytes("123"),//salt=username+salt
+                getName()  //realm name
         );
-
         return authenticationInfo;
+
+//        UsernamePasswordToken upToken = (UsernamePasswordToken) token;
+//        String username = upToken.getUsername();
+//        String password = "";
+//        if (upToken.getPassword() != null)
+//        {
+//            password = new String(upToken.getPassword());
+//        }
+//
+//        //得到用户名
+////        String username = (String)token.getPrincipal();
+//        //得到密码这里返回的是不是String 是char的数组
+////        String password = (String)token.getCredentials();
+//        System.out.println("username:"+username);
+//        //得到用户名或者密码
+//        User user = new User();
+//        user.setName(username);
+//        User selectOne = userDao.selectOne(user);
+//        if (null == selectOne){
+//            return null;
+//        }
+//        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
+//                //用户名
+//                username,
+//                //密码
+//                selectOne.getPassword(),
+//                //salt=username+salt//md5加盐算法
+//                //ByteSource.Util.bytes(userInfo.getCredentialsSalt()),
+//                //realm name
+//                getName()
+//        );
+//
+//        return authenticationInfo;
     }
 }

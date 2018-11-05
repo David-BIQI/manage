@@ -40,12 +40,12 @@ public class Login {
     @PostMapping("/login")
     @ResponseBody
     @ApiOperation(value = "登录", notes="登录")
-    public ResultDto<UserDto> login(HttpSession session, @RequestBody @Validated(value = { com.biqi.model.validate.Login.class }) LoginDto loginDto,
-                                    BindingResult bindingResult) {
-        hasErrors(bindingResult);
+    public ResultDto<UserDto> login(HttpSession session, String username, String password) {
+        LoginDto loginDto = new LoginDto();
+        loginDto.setPassword(password);
+        loginDto.setUsername(username);
         ResultDto<UserDto> resultDto = new ResultDto<>();
         resultDto.setData(loginService.login(session,loginDto));
-
         return resultDto;
     }
 
