@@ -15,13 +15,13 @@ public class PageJumpController {
 
     @RequestMapping("/index")
     public String index(){
-        return"/manageLogin";
+        return "login";
     }
 
 
     @RequestMapping("/main")
     public String main(){
-        return"/manageLogin";
+        return"/main";
     }
 
 

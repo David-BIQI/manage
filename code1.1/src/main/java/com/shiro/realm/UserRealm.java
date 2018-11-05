@@ -87,13 +87,12 @@ public class UserRealm extends AuthorizingRealm {
 
         //得到用户名
         String username = (String)token.getPrincipal();
-        //得到密码
-        String password = (String)token.getCredentials();
-        System.out.println("username:"+username+"  password:"+password);
+        //得到密码这里返回的是不是String 是char的数组
+//        String password = (String)token.getCredentials();
+        System.out.println("username:"+username);
         //得到用户名或者密码
         User user = new User();
         user.setName(username);
-        user.setPassword(password);
         User selectOne = userDao.selectOne(user);
         if (null == selectOne){
             return null;
@@ -102,7 +101,7 @@ public class UserRealm extends AuthorizingRealm {
                 //用户名
                 username,
                 //密码
-                password,
+                selectOne.getPassword(),
                 //salt=username+salt//md5加盐算法
                 //ByteSource.Util.bytes(userInfo.getCredentialsSalt()),
                 //realm name

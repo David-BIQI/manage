@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@Configuration
+//@Configuration
 public class UserFilter {
 	@Bean
 	public RemoteIpFilter remoteIpFilter() {

@@ -30,7 +30,7 @@ public class LoginService {
 	public UserDto login(HttpSession session, LoginDto loginDto) {
 		// TODO 校验logintime sign等
 		User user = User.builder()
-						.name(loginDto.getName())
+						.name(loginDto.getUsername())
 						.password(loginDto.getPassword())
 						.build();
 		user = userDao.selectOne(user);

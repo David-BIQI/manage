@@ -20,7 +20,7 @@ public class LoginDto {
 	
 	@ApiModelProperty(value = "用户名")
     @Size(min = 1, max = 8,message="名字长度不必须是2-8个字符",groups = {Login.class})
-	private String name;
+	private String username;
 	
 	@ApiModelProperty(value = "密码")
     @Size(min = 1, max = 8,message="登陆密码输入长度错误",groups={Login.class})
